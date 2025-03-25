@@ -14,7 +14,7 @@ Xpt2046Touch* Xpt2046Touch::instance = nullptr;
 bool Xpt2046Touch::start(lv_display_t* display) {
     const esp_lcd_panel_io_spi_config_t io_config = ESP_LCD_TOUCH_IO_SPI_XPT2046_CONFIG(configuration->spiPinCs);
 
-    if (esp_lcd_new_panel_io_spi(SPI2_HOST, &io_config, &ioHandle) != ESP_OK) {
+    if (esp_lcd_new_panel_io_spi(configuration->spiDevice, &io_config, &ioHandle) != ESP_OK) {
         TT_LOG_E(TAG, "Touch IO SPI creation failed");
         return false;
     }
