@@ -1,6 +1,7 @@
 #pragma once
 
 #include "Tactility/app/AppContext.h"
+#include "lvgl.h"
 
 #include <Tactility/Bundle.h>
 #include <Tactility/Mutex.h>

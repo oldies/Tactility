@@ -32,7 +32,5 @@ rm -rf build
 echoNewPhase "Building $sdkconfig_file"
 
 cp $sdkconfig_file sdkconfig
-if not idf.py build; then
-    fatalError "Failed to build esp32s3 SDK"
-fi
+idf.py build
 

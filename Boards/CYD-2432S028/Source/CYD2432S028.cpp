@@ -116,6 +116,5 @@ extern const Configuration cyd_2432s028_config = {
             }
         }
     },*/
-    .uart = {},
-    .gps = {}
+    .uart = {}
 };
